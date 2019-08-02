@@ -30,13 +30,13 @@
 
 <p><b>Authors</b>: Igor Vasiljevic, Nick Kolkin, Shanyi Zhang,
 <a href="https://ttic.uchicago.edu/~rluo/">Ruotian Luo</a>,
-<a href="https://w-hc.github.io">Haochen Wang</a>
+<a href="https://w-hc.github.io">Haochen Wang</a>,
 <a href="http://falcondai.com/">Falcon Z. Dai</a>,
 <a href="http://www.afdaniele.com/">Andrea F. Daniele</a>,
-<a href="https://ttic.uchicago.edu/~mostajabi/Mohammadreza">Mostajabi</a>,
+<a href="https://ttic.uchicago.edu/~mostajabi/">Mohammadreza Mostajabi</a>,
 <a href="http://xksteven.com/resources/CV/">Steven Basart</a>,
 <a href="https://ttic.uchicago.edu/~mwalter/">Matthew R. Walter</a>,
-<a href="https://ttic.uchicago.edu/~gregory/">Gregory Shakhnarovich</a><b>&nbsp;from </b><ahref="http://ttic.edu/">TTI-Chicago</a>.</p>
+<a href="https://ttic.uchicago.edu/~gregory/">Gregory Shakhnarovich</a><b>&nbsp;from </b><a href="http://ttic.edu/">TTI-Chicago</a>.</p>
         
 <h2 id="diode-data">Introduction<a class="anchorjs-link " href="diode-dataset.github.io#diode-data" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
 <p>DIODE (Dense Indoor and Outdoor DEpth) is a dataset that contains diverse high-resolution color images with accurate, dense, wide-range depth measurements. It is the first public dataset to include RGBD images of indoor and outdoor scenes <b> obtained with one sensor suite.</b> For more information, please refer to our <a href="https://arxiv.org/abs/1908.00463"><b>technical report</b></a>.</p> 
@@ -72,8 +72,8 @@
 <p> We have released the train and val splits of DIODE, including RGB images, depth maps and depth validity masks. Test set and surface normals are coming soon. </p>
 <p>
 Download links:
-<a href="http://diode-dataset.s3.amazonaws.com/train.tar.gz">train.tar.gz</a> |
-<a href="http://diode-dataset.s3.amazonaws.com/val.tar.gz">val.tar.gz</a>
+<a href="http://diode-dataset.s3.amazonaws.com/train.tar.gz">train.tar.gz</a> (81GB) |
+<a href="http://diode-dataset.s3.amazonaws.com/val.tar.gz">val.tar.gz</a> (2.6GB)
 </p>
 <h3 id="data-organization">Dataset Layout<a class="anchorjs-link " href="diode-dataset.github.io#data-organization" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
 <p>DIODE data is organized as follows:
@@ -138,7 +138,9 @@ Download links:
 <p>Depth masks (<code class="highlighter-rouge">*_depth_mask.npy</code>): Binary depth validity masks where 1 indicates valid sensor returns and 0 otherwise.</p>
 
 <h2 id="diode-development-Toolkit">DIODE Development Toolkit<a class="anchorjs-link " href="diode-dataset.github.io#diode-development-codebase" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
-<p>Coming soon...</p>
+<p>Please visit our official project repository for more information and DIODE development toolkit.<br>Devkit Link:
+<a href="https://github.com/diode-dataset/diode-devkit">diode-devkit</a>
+</p>
 
 <h2 id="citation">Citation<a class="anchorjs-link " href="diode-dataset.github.io#citation" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
 <p>If you use the DIODE dataset please cite:</p>
@@ -149,7 +151,7 @@ Download links:
             Steven Basart and Matthew R. Walter and Gregory Shakhnarovich},
     journal={CoRR},
     volume={abs/1908.00463},
-    year = {2019},
+    year={2019},
     url={http://arxiv.org/abs/1908.00463}
 }
 </code></pre></div></div>
