@@ -1,194 +1,398 @@
 <!DOCTYPE html>
 <!-- saved from url=(0030)diode-dataset.github.io -->
-<html lang="en-US"><head>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-145108968-1"></script>
-<script>
+<html lang="en-US">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145108968-1"></script>
+  <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-145108968-1');
-</script>
-  
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </script>
 
-<!-- Begin Jekyll SEO tag v2.5.0 -->
-<title text-align:"center">DIODE Dataset</title>
-<link rel="icon" href="./files/favicon.ico">
-<meta name="generator" content="Jekyll v3.8.5">
-<meta property="og:title" content="DIODE: A Dense Indoor and Outdoor DEpth Dataset">
-<meta property="og:locale" content="en_US">
-<meta name="description" content="DIODE Dataset">
-<meta property="og:description" content="DIODE Dataset">
-<link rel="canonical" href="diode-dataset.github.io">
-<meta property="og:url" content="diode-dataset.github.io">
-<meta property="og:site_name" content="diode-dataset.github.io">
-<script type="application/ld+json">
-{"@type":"WebSite","url":"diode-dataset.github.io","headline":"
-","name":"diode-dataset.github.io","description":"DIODE Dataset","@context":"http://schema.org"}</script>
-<!-- End Jekyll SEO tag -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-    <style class="anchorjs"></style><link rel="stylesheet" href="./files/style.css">
-    
-    
-    
-    
-  </head>
-  <body>
-    <div class="container-lg px-3 my-5 markdown-body">
-      
-<h1 id="diode-a-dense-indoor-and-outdoor-depth-dataset"><img src="./files/DIODEv2.png" style="float:right" height="100">DIODE: A Dense Indoor and Outdoor DEpth Dataset</h1>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<p><b>Authors</b>: Igor Vasiljevic, Nick Kolkin, 
-<a href="https://sites.google.com/site/shanyizhanghomepage/home">Shanyi Zhang</a>,
-<a href="https://ttic.uchicago.edu/~rluo/">Ruotian Luo</a>,
-<a href="https://w-hc.github.io">Haochen Wang</a>,
-<a href="http://falcondai.com/">Falcon Z. Dai</a>,
-<a href="http://www.afdaniele.com/">Andrea F. Daniele</a>,
-<a href="https://ttic.uchicago.edu/~mostajabi/">Mohammadreza Mostajabi</a>,
-<a href="http://xksteven.com/resources/CV/">Steven Basart</a>,
-<a href="https://ttic.uchicago.edu/~mwalter/">Matthew R. Walter</a>,
-<a href="https://ttic.uchicago.edu/~gregory/">Gregory Shakhnarovich</a><b>&nbsp;from </b><a href="http://ttic.edu/">TTI-Chicago</a>.</p>
-        
-<h2 id="diode-data">Introduction<a class="anchorjs-link " href="diode-dataset.github.io#diode-data" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
-<p>DIODE (Dense Indoor and Outdoor DEpth) is a dataset that contains diverse high-resolution color images with accurate, dense, wide-range depth measurements. It is the first public dataset to include RGBD images of indoor and outdoor scenes <b> obtained with one sensor suite.</b> For more information, please refer to our <a href="https://arxiv.org/abs/1908.00463"><b>technical report</b></a>.</p> 
+  <!-- Begin Jekyll SEO tag v2.5.0 -->
+  <title text-align:"center">DIODE Dataset</title>
+  <link rel="icon" href="files/favicon.ico">
+  <meta name="generator" content="Jekyll v3.8.5">
+  <meta property="og:title" content="DIODE: A Dense Indoor and Outdoor DEpth Dataset">
+  <meta property="og:locale" content="en_US">
+  <meta name="description" content="DIODE Dataset">
+  <meta property="og:description" content="DIODE Dataset">
+  <link rel="canonical" href="diode-dataset.github.io">
+  <meta property="og:url" content="diode-dataset.github.io">
+  <meta property="og:site_name" content="diode-dataset.github.io">
+  <script type="application/ld+json">
+  {"@type":"WebSite","url":"diode-dataset.github.io","headline":"
+  ","name":"diode-dataset.github.io","description":"DIODE Dataset","@context":"http://schema.org"}</script>
+  <!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/zoomer.css">
+
+  <script type="text/javascript" src="js/jquery-3.4.1.slim.min.js"></script>
+</head>
+
+<body>
+  <div class="container-lg px-3 my-5 markdown-body">
 
 
-<p><img src="./files/rgb.png" height="169">
-   <img src="./files/00004_00034_indoors_150_000.png" width="225">
-   <img src="./files/00019_00183_indoors_300_010.png" width="225">
-   <img src="./files/00011_00105_outdoor_040_010.png" width="225">
-   <img src="./files/00013_00124_outdoor_240_010.png" width="225"></p>
-       
-<p><img src="./files/depth.png" height="169">
-   <img src="./files/00004_00034_indoors_150_000_depth.png" width="225">
-   <img src="./files/00019_00183_indoors_300_010_depth.png" width="225">
-   <img src="./files/00011_00105_outdoor_040_010_depth.png" width="225">
-   <img src="./files/00013_00124_outdoor_240_010_depth.png" width="225"></p>
+    <!-- DIODE -->
 
-<p><img src="./files/normals.png" height="169">
-   <img src="./files/150_000_normalsV2.png" width="225">
-   <img src="./files/300_010_normalsV2.png" width="225">
-   <img src="./files/040_010_normalsV2.png" width="225">
-   <img src="./files/240_010_normalsV2.png" width="225"></p>
-       
-<p><img src="./files/doors.png" height="35"></p>
-  
-<h2 id="diode-data">News<a class="anchorjs-link " href="diode-dataset.github.io#diode-data" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
-<p><li><i>August 1st, 2019 </i>: DIODE initial release.</li></p>        
-        
-<h2 id="diode-data"><br>DIODE Dataset<a class="anchorjs-link " href="diode-dataset.github.io#diode-data" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
-<h3 id="data-download">Dataset Download<a class="anchorjs-link " href="diode-dataset.github.io#data-download" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
+    <h1 id="diode-a-dense-indoor-and-outdoor-depth-dataset">
+      <img src="files/DIODEv2.png" style="float:right" height="100">
+      DIODE: A Dense Indoor and Outdoor DEpth Dataset
+    </h1>
 
 
-<p> We have released the train and val splits of DIODE, including RGB images, depth maps and depth validity masks. Test set and surface normals are coming soon. </p>
-<p>
-Download links:
-<a href="http://diode-dataset.s3.amazonaws.com/train.tar.gz">train.tar.gz</a> (81GB) |
-<a href="http://diode-dataset.s3.amazonaws.com/val.tar.gz">val.tar.gz</a> (2.6GB)
-</p>
-<h3 id="data-organization">Dataset Layout<a class="anchorjs-link " href="diode-dataset.github.io#data-organization" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
-<p>DIODE data is organized hierarchically. 
-<img src="./files/data_structure.png" width="900"></p>
+    <!-- + Authors -->
 
-<p><b>Description</b>: A 'scene' usually corresponds to a somewhat compact location/vicinity, such as interior (or a single floor) of a building, surroundings of a landmark,  neighborhood, etc. A 'scan' corresponds to a single data acquisition by the scanner, resulting in a set of crops, all taken from the same position. Multiple scans within the same scene may or may not have overlap in the physical points they capture; scans in distinct scenes will typically have no overlap.</p>
+    <p>
+      <b>Authors</b>:
+      Igor Vasiljevic,
+      Nick Kolkin,
+      <a href="https://sites.google.com/site/shanyizhanghomepage/home">Shanyi Zhang</a>,
+      <a href="https://ttic.uchicago.edu/~rluo/">Ruotian Luo</a>,
+      <a href="https://w-hc.github.io">Haochen Wang</a>,
+      <a href="http://falcondai.com/">Falcon Z. Dai</a>,
+      <a href="http://www.afdaniele.com/">Andrea F. Daniele</a>,
+      <a href="https://ttic.uchicago.edu/~mostajabi/">Mohammadreza Mostajabi</a>,
+      <a href="http://xksteven.com/resources/CV/">Steven Basart</a>,
+      <a href="https://ttic.uchicago.edu/~mwalter/">Matthew R. Walter</a>,
+      <a href="https://ttic.uchicago.edu/~gregory/">Gregory Shakhnarovich</a>
+      <b>&nbsp;from </b><a href="http://ttic.edu/">TTI-Chicago</a>.
+    </p>
 
-<h3 id="data-organization">Dataset Statistics<a class="anchorjs-link " href="diode-dataset.github.io#data-organization" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
-<p><li><b>Partitioning</b>:</li></p>
-<table>
-        <tr>
-            <td align="right">train </td>
-            <td align="right"> indoors</td>
-            <td align="right">7 scenes</td>
-            <td align="right">80 scans</td>
-            <td align="right">8574 images</td>
-        </tr>
-        <tr>
-            <td align="right">train </td>
-            <td align="right">outdoor</td>
-            <td align="right">12 scenes</td>
-            <td align="right">99 scans</td>
-            <td align="right">16884 images</td>
-        </tr>
-        <tr>
-            <td align="right">val</td>
-            <td align="right">indoors</td>
-            <td align="right">3 scenes</td>
-            <td align="right">10 scans</td>
-            <td align="right">325 images</td>
-        </tr>
-        <tr>
-            <td align="right">val</td>
-            <td align="right">outdoor </td>
-            <td align="right">3 scenes</td>
-            <td align="right">10 scans</td>
-            <td align="right">446 images</td>
-        </tr>
-        <tr>
-            <td align="right">test</td>
-            <td align="right">indoors</td>
-            <td align="right">2 scenes</td>
-            <td align="right">20 scans</td>
-            <td align="right">753 images</td>
-        </tr>
-        <tr>
-            <td align="right">test</td>
-            <td align="right">outdoor </td>
-            <td align="right">3 scenes</td>
-            <td align="right">20 scans</td>
-            <td align="right">876 images</td>
-        </tr>
-</table>
-<li><b>Depth Distribution</b>:</li>
-<p><img src="./files/distribution.png" height="250"></p>
-             
-<h3 id="data-formats">File Naming Conventions and Formats<a class="anchorjs-link " href="diode-dataset.github.io#data-formats" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h3>
-<p>The dataset consists of RGB images, depth maps and depth validity masks. Their formats are as follows:</p>
 
-<p>RGB images (<code class="highlighter-rouge">*.png</code>): RGB images with a resolution of 1024 × 768.</p>
+    <!-- + Introduction -->
 
-<p>Depth maps (<code class="highlighter-rouge">*_depth.npy</code>): Depth ground truth with the same resolution as the images.</p>
+    <h2 id="diode-data">
+      Introduction
+      <a class="anchorjs-link" href="diode-dataset.github.io#diode-data" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h2>
+    <p>
+      DIODE (Dense Indoor and Outdoor DEpth) is a dataset that contains diverse
+      high-resolution color images with accurate, dense, wide-range depth measurements.
+      It is the first public dataset to include RGBD images of indoor and outdoor scenes
+      <b>obtained with one sensor suite.</b>
+      For more information, please refer to our
+      <a href="https://arxiv.org/abs/1908.00463"><b>technical report</b></a>.
+    </p>
 
-<p>Depth masks (<code class="highlighter-rouge">*_depth_mask.npy</code>): Binary depth validity masks where 1 indicates valid sensor returns and 0 otherwise.</p>
+    <p>
+      <img src="files/rgb.png" height="169">
 
-<h2 id="diode-development-Toolkit"><br>DIODE Development Toolkit<a class="anchorjs-link " href="diode-dataset.github.io#diode-development-codebase" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
-<p>Please visit our official project repository for more information and DIODE development toolkit.<br>Devkit Link:
-<a href="https://github.com/diode-dataset/diode-devkit">diode-devkit</a>
-</p>
+      <img class="zoomable_img" data-full="images/full/00004_00034_indoors_150_000.jpg" src="images/thumbnails/thumbnail_00004_00034_indoors_150_000.jpg">
+      <img class="zoomable_img" data-full="images/full/00019_00183_indoors_300_010.jpg" src="images/thumbnails/thumbnail_00019_00183_indoors_300_010.jpg">
+      <img class="zoomable_img" data-full="images/full/00011_00105_outdoor_040_010.jpg" src="images/thumbnails/thumbnail_00011_00105_outdoor_040_010.jpg">
+      <img class="zoomable_img" data-full="images/full/00013_00124_outdoor_240_010.jpg" src="images/thumbnails/thumbnail_00013_00124_outdoor_240_010.jpg">
+    </p>
 
-<h2 id="citation"><br>Citation<a class="anchorjs-link " href="diode-dataset.github.io#citation" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
-<p>If you use the DIODE dataset please cite:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@article{diode_dataset,
-    title={{DIODE}: {A} {D}ense {I}ndoor and {O}utdoor {DE}pth {D}ataset},
-    author={Igor Vasiljevic and Nick Kolkin and Shanyi Zhang and Ruotian Luo and 
-            Haochen Wang and Falcon Z. Dai and Andrea F. Daniele and Mohammadreza Mostajabi and 
-            Steven Basart and Matthew R. Walter and Gregory Shakhnarovich},
-    journal={CoRR},
-    volume={abs/1908.00463},
-    year={2019},
-    url={http://arxiv.org/abs/1908.00463}
-}
-</code></pre></div></div>
-<h2 id="contact"><br>Contact<a class="anchorjs-link " href="diode-dataset.github.io#contact" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
-<p>If you have any questions, please contact us at <a href="diode.dataset@gmail.com">diode.dataset@gmail.com</a>.</p>
+    <p>
+      <img src="files/depth.png" height="169">
 
- <h2 id="contact"><br>Acknowledgements<a class="anchorjs-link " href="diode-dataset.github.io#contact" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
+      <img class="zoomable_img" data-full="images/full/00004_00034_indoors_150_000_depth.jpg" src="images/thumbnails/thumbnail_00004_00034_indoors_150_000_depth.jpg">
+      <img class="zoomable_img" data-full="images/full/00019_00183_indoors_300_010_depth.jpg" src="images/thumbnails/thumbnail_00019_00183_indoors_300_010_depth.jpg">
+      <img class="zoomable_img" data-full="images/full/00011_00105_outdoor_040_010_depth.jpg" src="images/thumbnails/thumbnail_00011_00105_outdoor_040_010_depth.jpg">
+      <img class="zoomable_img" data-full="images/full/00013_00124_outdoor_240_010_depth.jpg" src="images/thumbnails/thumbnail_00013_00124_outdoor_240_010_depth.jpg">
+    </p>
 
- <p>This research was in part sponsored by:</p>
- <li>The Air Force Research Laboratory and DARPA under awards number FA8750-18-2-0126 and FA9550-18-1-0166. </li>
- <li>The Robotics Consortium of the U.S. Army Research Laboratory under the Collaborative Technology Alliance Program Cooperative Agreement W911NF-10-2-0016.</li> 
-       
-<h2 id="diode-development-Toolkit"><br><br><br><a class="anchorjs-link " href="diode-dataset.github.io#diode-development-codebase" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a></h2>
-<p>Last updated: <i>August 1st, 2019 </i></p>
-      
+    <p>
+      <img src="files/normals.png" height="169">
+
+      <img class="zoomable_img" data-full="images/full/150_000_normalsV2.jpg" src="images/thumbnails/thumbnail_150_000_normalsV2.jpg">
+      <img class="zoomable_img" data-full="images/full/300_010_normalsV2.jpg" src="images/thumbnails/thumbnail_300_010_normalsV2.jpg">
+      <img class="zoomable_img" data-full="images/full/040_010_normalsV2.jpg" src="images/thumbnails/thumbnail_040_010_normalsV2.jpg">
+      <img class="zoomable_img" data-full="images/full/240_010_normalsV2.jpg" src="images/thumbnails/thumbnail_240_010_normalsV2.jpg">
+    </p>
+
+    <p>
+      <img src="files/doors.png" height="35">
+    </p>
+
+
+    <!-- + News -->
+
+    <h2 id="diode-data">
+      News
+      <a class="anchorjs-link" href="diode-dataset.github.io#diode-data" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h2>
+    <p>
+      <li>
+        <i>August 1st, 2019 </i>: DIODE initial release.
+      </li>
+    </p>
+
+
+    <!-- + DIODE Dataset -->
+
+    <h2 id="diode-data">
+      <br>
+      DIODE Dataset
+      <a class="anchorjs-link" href="diode-dataset.github.io#diode-data" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h2>
+
+
+    <!-- ++ Dataset Download -->
+
+    <h3 id="data-download">
+      Dataset Download
+      <a class="anchorjs-link" href="diode-dataset.github.io#data-download" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h3>
+    <p>
+      We have released the train and val splits of DIODE,
+      including RGB images, depth maps and depth validity masks.
+      Test set and surface normals are coming soon.
+    </p>
+    <p>
+      Download links:
+      <a href="http://diode-dataset.s3.amazonaws.com/train.tar.gz">train.tar.gz</a> (81GB) |
+      <a href="http://diode-dataset.s3.amazonaws.com/val.tar.gz">val.tar.gz</a> (2.6GB)
+    </p>
+
+
+    <!-- ++ Dataset Layout -->
+
+    <h3 id="data-organization">
+      Dataset Layout
+      <a class="anchorjs-link" href="diode-dataset.github.io#data-organization" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h3>
+    <p>
+      DIODE data is organized hierarchically.
+      <img src="files/data_structure.png" width="900">
+    </p>
+    <p>
+      <b>Description</b>:
+      A 'scene' usually corresponds to a somewhat compact location/vicinity,
+      such as interior (or a single floor) of a building, surroundings of
+      a landmark,  neighborhood, etc. A 'scan' corresponds to a single data
+      acquisition by the scanner, resulting in a set of crops, all taken from
+      the same position. Multiple scans within the same scene may or may not
+      have overlap in the physical points they capture; scans in distinct
+      scenes will typically have no overlap.
+    </p>
+
+
+    <!-- ++ Dataset Statistics -->
+
+    <h3 id="data-organization">
+      Dataset Statistics
+      <a class="anchorjs-link" href="diode-dataset.github.io#data-organization" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h3>
+
+    <p>
+      <li>
+        <b>Partitioning</b>:
+      </li>
+    </p>
+    <table>
+      <tr>
+        <td align="right">train </td>
+        <td align="right"> indoors</td>
+        <td align="right">7 scenes</td>
+        <td align="right">80 scans</td>
+        <td align="right">8574 images</td>
+      </tr>
+      <tr>
+        <td align="right">train </td>
+        <td align="right">outdoor</td>
+        <td align="right">12 scenes</td>
+        <td align="right">99 scans</td>
+        <td align="right">16884 images</td>
+      </tr>
+      <tr>
+        <td align="right">val</td>
+        <td align="right">indoors</td>
+        <td align="right">3 scenes</td>
+        <td align="right">10 scans</td>
+        <td align="right">325 images</td>
+      </tr>
+      <tr>
+        <td align="right">val</td>
+        <td align="right">outdoor </td>
+        <td align="right">3 scenes</td>
+        <td align="right">10 scans</td>
+        <td align="right">446 images</td>
+      </tr>
+      <tr>
+        <td align="right">test</td>
+        <td align="right">indoors</td>
+        <td align="right">2 scenes</td>
+        <td align="right">20 scans</td>
+        <td align="right">753 images</td>
+      </tr>
+      <tr>
+        <td align="right">test</td>
+        <td align="right">outdoor </td>
+        <td align="right">3 scenes</td>
+        <td align="right">20 scans</td>
+        <td align="right">876 images</td>
+      </tr>
+    </table>
+
+    <li>
+      <b>Depth Distribution</b>:
+    </li>
+    <p>
+      <img src="files/distribution.png" height="250">
+    </p>
+
+
+    <!-- ++ Conventions and Formats -->
+
+    <h3 id="data-formats">
+      File Naming Conventions and Formats
+      <a class="anchorjs-link" href="diode-dataset.github.io#data-formats" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h3>
+    <p>
+      The dataset consists of RGB images, depth maps and depth validity masks. Their formats are as follows:
+    </p>
+    <p>
+      RGB images (<code class="highlighter-rouge">*.png</code>): RGB images with a resolution of 1024 × 768.
+    </p>
+    <p>
+      Depth maps (<code class="highlighter-rouge">*_depth.npy</code>): Depth ground truth with the same resolution as the images.
+    </p>
+    <p>
+      Depth masks (<code class="highlighter-rouge">*_depth_mask.npy</code>): Binary depth validity masks where 1 indicates valid sensor returns and 0 otherwise.
+    </p>
+
+
+    <!-- + DIODE Development Toolkit -->
+
+    <h2 id="diode-development-Toolkit">
+      <br>
+      DIODE Development Toolkit
+      <a class="anchorjs-link" href="diode-dataset.github.io#diode-development-codebase" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h2>
+    <p>
+      Please visit our official project repository for more information and
+      DIODE development toolkit.
+      <br>
+      Devkit Link:
+      <a href="https://github.com/diode-dataset/diode-devkit">diode-devkit</a>
+    </p>
+
+
+    <!-- + Citation -->
+
+    <h2 id="citation">
+      <br>
+      Citation
+      <a class="anchorjs-link" href="diode-dataset.github.io#citation" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h2>
+    <p>
+      If you use the DIODE dataset please cite:
+    </p>
+    <div class="highlighter-rouge">
+      <div class="highlight">
+<pre class="highlight">
+<code>@article{diode_dataset,
+  title={{DIODE}: {A} {D}ense {I}ndoor and {O}utdoor {DE}pth {D}ataset},
+  author={Igor Vasiljevic and Nick Kolkin and Shanyi Zhang and Ruotian Luo and
+  Haochen Wang and Falcon Z. Dai and Andrea F. Daniele and Mohammadreza Mostajabi and
+  Steven Basart and Matthew R. Walter and Gregory Shakhnarovich},
+  journal={CoRR},
+  volume={abs/1908.00463},
+  year={2019},
+  url={http://arxiv.org/abs/1908.00463}
+}</code>
+</pre>
+      </div>
     </div>
-    <script src="./files/anchor.min.js" integrity="sha256-lZaRhKri35AyJSypXXs4o6OPFTbTmUoltBbDCbdzegg=" crossorigin="anonymous"></script>
-    <script>anchors.add();</script>
-    
-  
 
-</body></html>
+
+    <!-- + Contact -->
+
+    <h2 id="contact">
+      <br>
+      Contact
+      <a class="anchorjs-link" href="diode-dataset.github.io#contact" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h2>
+    <p>
+      If you have any questions, please contact us at
+      <a href="diode.dataset@gmail.com">diode.dataset@gmail.com</a>.
+    </p>
+
+
+    <!-- + Acknowledgements -->
+
+    <h2 id="acknowledgements">
+      <br>
+      Acknowledgements
+      <a class="anchorjs-link" href="diode-dataset.github.io#contact" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h2>
+    <p>
+      This research was in part sponsored by:
+    </p>
+    <li>
+      The Air Force Research Laboratory and DARPA under awards number
+      FA8750-18-2-0126 and FA9550-18-1-0166.
+    </li>
+    <li>
+      The Robotics Consortium of the U.S. Army Research Laboratory under the
+      Collaborative Technology Alliance Program Cooperative Agreement
+      W911NF-10-2-0016.
+    </li>
+
+    <br><br><br>
+
+    <hr>
+    <p>Last updated: <i>August 1st, 2019 </i></p>
+  </div>
+
+
+  <!-- Image modal -->
+  <div id="zoom_modal" class="modal">
+    <!-- close Button -->
+    <span class="close" id="modal_close">&times;</span>
+
+    <!-- Modal Content (The Image) -->
+    <img class="modal-content" id="modal_content">
+
+    <!-- Modal Caption (Image Text) -->
+    <div id="caption"></div>
+  </div>
+
+  <script src="js/anchor.min.js"></script>
+  <script>anchors.add();</script>
+
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+      $('img.zoomable_img').click(function(){
+        let modal = document.getElementById("zoom_modal");
+        let modalImg = document.getElementById("modal_content");
+        let captionText = document.getElementById("caption");
+        // ---
+        modal.style.display = "block";
+        modalImg.src = $(this).data('full');
+        captionText.innerHTML = this.alt;
+      });
+
+      function close_modal(){
+        let modal = document.getElementById("zoom_modal");
+        modal.style.display = "none";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      $('#modal_close').on('click', function() {
+        close_modal();
+      });
+
+      $(document).on('keydown', function(event) {
+        if (event.key == "Escape") {
+          close_modal();
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
