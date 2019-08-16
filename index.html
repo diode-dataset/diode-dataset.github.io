@@ -152,9 +152,14 @@
     </p>
     <p>
       Download links:
+      <li>Amazon Web Service:
       <a href="http://diode-dataset.s3.amazonaws.com/train.tar.gz">train.tar.gz</a> (81GB) |
       <a href="http://diode-dataset.s3.amazonaws.com/val.tar.gz">val.tar.gz</a> (2.6GB)
+      <li>Tencent Cloud:
+      <a href="https://diode-dataset-1254389886.cos.ap-shanghai.myqcloud.com/train.tar.gz">train.tar.gz</a> (81GB) |
+      <a href="https://diode-dataset-1254389886.cos.ap-shanghai.myqcloud.com/val.tar.gz">val.tar.gz</a> (2.6GB)
     </p>
+
 
 
     <!-- ++ Dataset Layout -->
@@ -180,7 +185,31 @@
       
     </p>
 
-
+        <h3 id="data-organization">
+      Dataset Feature
+      <a class="anchorjs-link" href="diode-dataset.github.io#data-organization" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h3>
+    <p>
+    <ul>
+    <li>
+    <b>Sensor Performance</b>:
+    </li>
+    &#8211&nbsp;&nbsp;Return Density: 99.6% (indoor) / 66.9% (outdoor) <br>
+    &#8211&nbsp;&nbsp;Depth Precision: ±1 mm <br>
+    &#8211&nbsp;&nbsp;Angular Resolution: 0.009°<br>
+    &#8211&nbsp;&nbsp;Max Range: 350 m<br>
+    &#8211&nbsp;&nbsp;Min Range: 0.6 m
+    </p>
+    <p>
+    <li>
+    <b>Diversity</b>:
+    </li>
+    &#8211&nbsp;&nbsp;Time: Daytime and night, Several months (fall, winter)<br>
+    &#8211&nbsp;&nbsp;Location: Data collection in several cities, Varying indoor and outdoor scene layout<br>
+    &#8211&nbsp;&nbsp;Dataset Curation: Manually selected image crops with various objects 
+	</ul>
+    </p>
+   
     <!-- ++ Dataset Statistics -->
 
     <h3 id="data-organization">
@@ -238,7 +267,6 @@
         <td align="right">876 images</td>
       </tr>
     </table>
-    <br>
     
     <li>
       <b>Depth Distribution</b>:
