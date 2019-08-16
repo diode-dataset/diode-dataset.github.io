@@ -187,7 +187,26 @@
       
     </p>
 
-        <h3 id="data-organization">
+    <!-- ++ Conventions and Formats -->
+
+    <h3 id="data-formats">
+      File Naming Conventions and Formats
+      <a class="anchorjs-link" href="diode-dataset.github.io#data-formats" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
+    </h3>
+    <p>
+      The dataset consists of RGB images, depth maps and depth validity masks. Their formats are as follows:
+    </p>
+    <p>
+      RGB images (<code class="highlighter-rouge">*.png</code>): RGB images with a resolution of 1024 × 768.
+    </p>
+    <p>
+      Depth maps (<code class="highlighter-rouge">*_depth.npy</code>): Depth ground truth with the same resolution as the images.
+    </p>
+    <p>
+      Depth masks (<code class="highlighter-rouge">*_depth_mask.npy</code>): Binary depth validity masks where 1 indicates valid sensor returns and 0 otherwise.
+    </p>	
+	
+     <h3 id="data-organization">
       Dataset Feature
       <a class="anchorjs-link" href="diode-dataset.github.io#data-organization" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
     </h3>
@@ -278,25 +297,6 @@
     </p>
     </ul>
 
-
-    <!-- ++ Conventions and Formats -->
-
-    <h3 id="data-formats">
-      File Naming Conventions and Formats
-      <a class="anchorjs-link" href="diode-dataset.github.io#data-formats" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
-    </h3>
-    <p>
-      The dataset consists of RGB images, depth maps and depth validity masks. Their formats are as follows:
-    </p>
-    <p>
-      RGB images (<code class="highlighter-rouge">*.png</code>): RGB images with a resolution of 1024 × 768.
-    </p>
-    <p>
-      Depth maps (<code class="highlighter-rouge">*_depth.npy</code>): Depth ground truth with the same resolution as the images.
-    </p>
-    <p>
-      Depth masks (<code class="highlighter-rouge">*_depth_mask.npy</code>): Binary depth validity masks where 1 indicates valid sensor returns and 0 otherwise.
-    </p>
 
 
     <!-- + DIODE Development Toolkit -->
