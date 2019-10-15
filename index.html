@@ -154,13 +154,17 @@
       Dataset Download
       <a class="anchorjs-link" href="diode-dataset.github.io#data-download" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
     </h3>
-    <p>
-      We have released the train and val splits of DIODE,
-      including RGB images, depth maps and depth validity masks.
-      Test set and surface normals are coming soon.
+        <p>
+      We have released the train and val splits of DIODE depth,
+      including RGB images, depth maps and depth validity masks. Currently, surface normals data is in the phase of final checking. 
+      Test set is coming soon.
+      
     </p>
     <p>
-      Download links:
+      <b>Download links:</b>
+
+      <li>RGB images, Depth maps and Depth validity masks:</li></br>
+      
     <table>
       <tr>
         <td align="center">Partition </td>
@@ -183,6 +187,28 @@
     </table>
     </p>
 
+      <li>Surface normals: (around the corner)</li></br>
+    <table>
+      <tr>
+        <td align="center">Partition </td>
+        <td align="center">Amazon Web Service </td>
+        <td align="center">Tencent Cloud</td>
+        <td align="center">MD5 Hash</td>
+      </tr>
+      <tr>
+        <td align="center">Train (--GB)</td>
+        <td align="center"> -- </td>
+        <td align="center"> -- </a> </td>
+        <td align="center"> -- </td>
+      </tr>
+      <tr>
+        <td align="center">Validation (--GB)</td>
+        <td align="center"> -- </td>
+        <td align="center"> -- </td>
+        <td align="center"> -- </td>
+      </tr>
+    </table>
+    </p>
 
 
     <!-- ++ Dataset Layout -->
@@ -192,7 +218,7 @@
       <a class="anchorjs-link" href="diode-dataset.github.io#data-organization" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
     </h3>
     <p>
-      DIODE data is organized hierarchically.
+      DIODE data is organized hierarchically. Detailed structure are shown as follows:</br>
       <img src="files/data_structure.png" width="900">
     </p>
     <p>
@@ -215,7 +241,7 @@
       <a class="anchorjs-link" href="diode-dataset.github.io#data-formats" aria-label="Anchor" data-anchorjs-icon="" style="font: 1em/1 anchorjs-icons; padding-left: 0.375em;"></a>
     </h3>
     <p>
-      The dataset consists of RGB images, depth maps and depth validity masks. Their formats are as follows:
+      The dataset consists of RGB images, depth maps, depth validity masks and surface normals. Their formats are as follows:
     </p>
     <p>
       RGB images (<code class="highlighter-rouge">*.png</code>): RGB images with a resolution of 1024 × 768.
@@ -226,6 +252,9 @@
     <p>
       Depth masks (<code class="highlighter-rouge">*_depth_mask.npy</code>): Binary depth validity masks where 1 indicates valid sensor returns and 0 otherwise.
     </p>	
+    <p>
+      Surface normals (<code class="highlighter-rouge">*_normal.npy</code>): Surface normal vectors with the same resolution as the images. Invalid normals are represented as (0,0,0).
+    </p>  
 	
      <h3 id="data-organization">
       Dataset Feature
